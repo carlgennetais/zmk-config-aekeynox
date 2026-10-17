@@ -4,6 +4,12 @@
 // include/aekeynox/selenium.keymap: after syncing with upstream, check that
 // the untouched keys of these layers still match their upstream definition.
 
+// Home-row mods: always a tap when typed within 150 ms of the previous key,
+// to avoid misfires on rolls
+&hrm {
+  require-prior-idle-ms = <150>;
+};
+
 // Symbols: ; and : on the same keys as , and . in Ergo-L
 // (bottom right: | ! ; : ? -> : ! | ; ?)
 &symbols_layer {
