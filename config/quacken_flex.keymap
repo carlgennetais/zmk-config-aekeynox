@@ -1,1 +1,46 @@
 #include <aekeynox/selenium.keymap>
+
+// Personal layer overrides (Ergo-L host). These replace whole layers from
+// include/aekeynox/selenium.keymap: after syncing with upstream, check that
+// the untouched keys of these layers still match their upstream definition.
+
+// Symbols: ; and : on the same keys as , and . in Ergo-L
+// (bottom right: | ! ; : ? -> : ! | ; ?)
+&symbols_layer {
+  bindings = <SELENIUM_KEYMAP_BINDINGS(
+    &trans  ,  S_CARET S_LT    S_GT    S_DLLR  S_PRCNT   ,   S_AT    S_AMPS  S_STAR  S_SQT   S_GRAVE  ,  &trans ,
+    &trans  ,  S_LBRC  S_LPAR  S_RPAR  S_RBRC  S_EQUAL   ,   S_BSLH  S_PLUS  S_MINUS S_FSLH  S_DQT    ,  &trans ,
+    &trans  ,  S_TILDE S_LBKT  S_RBKT  S_UNDER S_HASH    ,   S_COLON S_EXCL  S_PIPE  S_SEMI  S_QMARK  ,  &trans ,
+                 SYM_NUM_LAYER , &kp SPACE , &kp ENTER   ,   &trans ,  &trans ,  &trans
+  )>;
+};
+
+// VimNav: vim-prev/next, previous/next tab and close tab on the left top row
+&vim_nav_layer {
+  bindings = <SELENIUM_KEYMAP_BINDINGS(
+    &trans  ,  &vim_prev &vim_next &kp LC(PG_UP) &kp LC(PG_DN) X_CTL_W ,   &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp DEL ,  &trans ,
+    &trans  ,  X_ALL     X_SAVE    X_SHTAB       &kp TAB       &none   ,   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none   ,  &trans ,
+    &trans  ,  X_UNDO    X_CUT     X_COPY        X_PASTE       X_REDO  ,   X_MSC_L  X_MSC_D   X_MSC_U   X_MSC_R   &none   ,  &trans ,
+          VIM_LTHUMB_TUCK , &sc FN_MEDIA_LAYER DEL , &trans    ,   &trans ,  &mo FN_MEDIA_LAYER , NAV_RTHUMB_TUCK
+  )>;
+};
+
+// NumRow: operators on the bottom row; - . , stay transparent on their Ergo-L keys
+&num_row_layer {
+  bindings = <SELENIUM_KEYMAP_BINDINGS(
+    &trans  ,  &kp RS(N1) &kp RS(N2) &kp RS(N3) &kp RS(N4) &kp RS(N5)   ,   &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0)  ,  &trans ,
+    &trans  ,  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       ,   &kp N6     &kp N7     &kp N8     &kp N9     &kp N0      ,  &trans ,
+    &trans  ,  &none      &none      &trans     S_EQUAL    S_HASH       ,   &trans     S_PLUS     S_COLON    &trans     S_FSLH      ,  &trans ,
+                                  &trans , &kp RS(SPACE) , &trans       ,   &trans , &kp LS(SPACE) , &kp RALT
+  )>;
+};
+
+// FnMedia: F20 (mic mute) on the left inner home key
+&fn_media_layer {
+  bindings = <SELENIUM_KEYMAP_BINDINGS(
+    &trans  ,  &kp F1  &kp F2  &kp F3  &kp F4  &none    ,   &bt BT_SEL 2  &kp C_NEXT  &kp C_VOL_UP  &kp C_BRI_UP   &kp SLCK    ,  &trans ,
+    &trans  ,  &kp F5  &kp F6  &kp F7  &kp F8  &kp F20  ,   &bt_sel1_clr  &UH1 C_PP   &UH2 C_MUTE   &UH3 C_AL_LOCK &UH4 PSCRN  ,  &trans ,
+    &trans  ,  &kp F9  &kp F10 &kp F11 &kp F12 &none    ,   &bt BT_SEL 0  &kp C_PREV  &kp C_VOL_DN  &kp C_BRI_DN   &kp INS     ,  &trans ,
+                       &trans , &bootloader , &trans    ,   &trans , &sys_reset , &studio_unlock
+  )>;
+};
