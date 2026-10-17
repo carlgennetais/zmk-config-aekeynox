@@ -15,12 +15,13 @@
   )>;
 };
 
-// VimNav: vim-prev/next, previous/next tab and close tab on the left top row
+// VimNav: vim-prev/next, previous/next tab and close tab on the left top row;
+// vertical mouse scroll swapped for natural scrolling
 &vim_nav_layer {
   bindings = <SELENIUM_KEYMAP_BINDINGS(
     &trans  ,  &vim_prev &vim_next &kp LC(PG_UP) &kp LC(PG_DN) X_CTL_W ,   &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp DEL ,  &trans ,
     &trans  ,  X_ALL     X_SAVE    X_SHTAB       &kp TAB       &none   ,   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none   ,  &trans ,
-    &trans  ,  X_UNDO    X_CUT     X_COPY        X_PASTE       X_REDO  ,   X_MSC_L  X_MSC_D   X_MSC_U   X_MSC_R   &none   ,  &trans ,
+    &trans  ,  X_UNDO    X_CUT     X_COPY        X_PASTE       X_REDO  ,   X_MSC_L  X_MSC_U   X_MSC_D   X_MSC_R   &none   ,  &trans ,
           VIM_LTHUMB_TUCK , &sc FN_MEDIA_LAYER DEL , &trans    ,   &trans ,  &mo FN_MEDIA_LAYER , NAV_RTHUMB_TUCK
   )>;
 };
