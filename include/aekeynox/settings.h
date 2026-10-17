@@ -163,7 +163,7 @@
 // Note: you may have to release and rehold the layer to drop modifiers you
 // no longer need.
 
-// #define ENABLE_MOD_HOLDS
+#define ENABLE_MOD_HOLDS
 
 // Uncomment the following line to enable shift as a pinky HRM.
 // Useful for combined shortcuts, but NOT MEANT to type text!

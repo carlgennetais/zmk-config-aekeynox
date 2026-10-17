@@ -19,9 +19,15 @@ The bottom-row outer Shift keys of the 42-key layout have no physical key.
 #define KB_LAYOUT_ERGOL   // host layout
 #define LINUX             // shortcuts and HRM order for Linux
 #define VIM_NAVIGATION    // VimNav + NumRow instead of NavNum
+#define ENABLE_MOD_HOLDS  // mods held when entering a layer stay held
 #define HRM_SHIFT         // Shift on the pinky home-row keys (a, u)
 // hold-taps: default (HT_HOME_ROW_MODS)
 ```
+
+`ENABLE_MOD_HOLDS` gives one-handed Alt+Tab: hold `n` (Alt), hold the L-home
+thumb (VimNav), release `n`, tap L-index (Tab) / L-mid (Shift+Tab), release the
+thumb to switch. A modifier held when entering a layer stays held until the
+layer thumb is released.
 
 ## Keymap (`config/quacken_flex.keymap`)
 
