@@ -37,6 +37,14 @@ Rows read left pinky → left inner │ right inner → right pinky.
 A home-row key pressed within 150 ms of the previous key is always a letter,
 which stops misfires on rolls. Pause briefly before holding a home-row mod.
 
+### Base
+
+Holding Tab enables the NavNum layer: Esc, arrows, Home/End, PgUp/PgDn, Select
+All, Undo/Cut/Copy/Paste/Redo and the left thumb keys, all on the left hand, for
+one-handed use. Tapping it still sends Tab. It is an `&lt` key (tap-preferred,
+300 ms), so hold it for longer than the tapping term before you press the next
+key. Tap then hold to get Tab auto-repeat.
+
 ### Symbols
 
 `;` and `:` sit on the same keys as `,` and `.` in Ergo-L (Shift+`,` = `;`,
