@@ -48,7 +48,7 @@
   bindings = <SELENIUM_KEYMAP_BINDINGS(
     &trans  ,  &kp RS(N1) &kp RS(N2) &kp RS(N3) &kp RS(N4) &kp RS(N5)   ,   &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0)  ,  &trans ,
     &trans  ,  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       ,   &kp N6     &kp N7     &kp N8     &kp N9     &kp N0      ,  &trans ,
-    &trans  ,  &none      &none      &trans     S_EQUAL    S_HASH       ,   &trans     S_PLUS     S_COLON    &trans     S_FSLH      ,  &trans ,
+    &trans  ,  S_TILDE    &none      &trans     S_EQUAL    S_HASH       ,   &trans     S_PLUS     S_COLON    &trans     S_FSLH      ,  &trans ,
                                   &trans , &kp RS(SPACE) , &trans       ,   &trans , &kp LS(SPACE) , &kp RALT
   )>;
 };

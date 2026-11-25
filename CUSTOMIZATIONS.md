@@ -74,8 +74,8 @@ Operators on the bottom row; `-` `.` `,` stay transparent on their Ergo-L keys.
 
 ```
 bottom:   — — — — —  │ - , . : /
-      →   — — □ = #  │ □ + : □ /
-types:    — — - = #  │ . + : , /
+      →   ~ — □ = #  │ □ + : □ /
+types:    ~ — - = #  │ . + : , /
 ```
 
 ### FnMedia
